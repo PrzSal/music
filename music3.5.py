@@ -125,10 +125,10 @@ def search_albums_by_letter(music_complet):
                 print('')
 
 
-def find_albums_by_genhre(music_complet):
+def find_albums_by_genre(music_complet):
     stop = 0
     while stop == 0:
-        search = input("Please give me the genhre the album: ").upper()
+        search = input("Please give me the genre the album: ").upper()
         for genre in music_complet:
             if search in genre[1][1] and len(search) >= 3:
                 print("------------------------------------------------------")
@@ -137,7 +137,7 @@ def find_albums_by_genhre(music_complet):
                 stop += 1
         else:
             if stop == 0:
-                print("I don't know this letter!")
+                print("I don't know this genre!")
             else:
                 print('')
 
@@ -194,7 +194,7 @@ def main():
             search_albums_by_letter(music_complet)
         elif menu == '6':
             music_complet = reader_music()
-            find_albums_by_genhre(music_complet)
+            find_albums_by_genre(music_complet)
         elif menu == '7':
             music_complet = reader_music()
             how_years_old_all_albums(music_complet)
